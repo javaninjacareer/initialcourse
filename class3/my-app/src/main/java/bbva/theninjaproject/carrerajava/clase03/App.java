@@ -2,6 +2,7 @@ package bbva.theninjaproject.carrerajava.clase03;
 
 import bbva.theninjaproject.carrerajava.clase03.step1.PersonaStep1;
 import bbva.theninjaproject.carrerajava.clase03.step2.PersonaStep2;
+import bbva.theninjaproject.carrerajava.clase03.step3.PersonaStep3;
 
 /**
  * Hello world!
@@ -15,6 +16,7 @@ public class App
         
         ejemplo_step1();
         ejemplo_step2();
+        ejemplo_step3();
     }
     
     
@@ -47,5 +49,17 @@ public class App
         		
         p1.saludar();
         p2.saludar();
+    }
+    
+    /**
+     * STEP 3: Ejemplo publico y privado
+     */
+    public static void ejemplo_step3()
+    {
+    	System.out.println( "App.ejemplo_step2()");
+    	
+        PersonaStep3 p3 = new PersonaStep3("Mariano", "19900221");
+
+        p3.saludar();
     }
 }
