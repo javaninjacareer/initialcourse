@@ -17,9 +17,13 @@ package bbva.theninjaproject.carrerajava.clase03.step1;
 public class PersonaStep1 {
 	
 	public String nombre;
+
+	public String saludo() {
+		return "Hola " + this.nombre;
+	}
 	
 	public void saludar() {
-		System.out.println("Hola " + this.nombre);
+		System.out.println(this.saludo());
 	}
 
 }
