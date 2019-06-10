@@ -56,10 +56,10 @@ public class App
      */
     public static void ejemplo_step3()
     {
-    	System.out.println( "App.ejemplo_step2()");
+    	System.out.println( "App.ejemplo_step3()");
     	
-        PersonaStep3 p3 = new PersonaStep3("Mariano", "19900221");
+        PersonaStep3 mariano = new PersonaStep3("Mariano", "1990-01-24");
 
-        p3.saludar();
+        mariano.saludar();
     }
 }
