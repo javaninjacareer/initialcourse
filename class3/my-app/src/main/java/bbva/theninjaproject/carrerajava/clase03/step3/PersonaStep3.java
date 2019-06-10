@@ -20,6 +20,9 @@ public class PersonaStep3 {
 	public String nombre;
 	public LocalDate fechaNacimiento;
 	private int edad;
+	
+	private String domicilio = "";
+	protected String profesion = "";
 
 	
 	public PersonaStep3(String nombre, String fechaNacimiento_yyyyMMdd) {
@@ -38,7 +41,8 @@ public class PersonaStep3 {
 	public int getEdad() {
 		LocalDate ahora = LocalDate.now();
 		Period periodo = Period.between(this.fechaNacimiento, ahora);
-		return periodo.getYears();
+		this.edad = periodo.getYears();
+		return this.edad;
 	}
 	
 	public String saludo() {
@@ -49,5 +53,24 @@ public class PersonaStep3 {
 	
 	public void saludar() {
 		System.out.println(this.saludo());
+	}
+
+	/**
+	 * Getter and setters
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDomicilio() {
+		return domicilio;
+	}
+
+	public void setDomicilio(String domicilio) {
+		this.domicilio = domicilio;
 	}
 }
