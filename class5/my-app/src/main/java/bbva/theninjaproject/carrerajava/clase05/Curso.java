@@ -9,7 +9,8 @@ public class Curso {
 	String nombre; 
 	String code;
 	
-	List<Persona> incriptos = new ArrayList<Persona>();
+	 List<Persona> inscriptos = new ArrayList<Persona>();
+//	Set<Persona> inscriptos = new HashSet<Persona>();
 	
 	public Curso (String nombre) {
 		this.nombre = nombre;
@@ -27,7 +28,7 @@ public class Curso {
 	 */
 	public void inscribirAlumno(Persona alumno) {
 		
-		incriptos.add(alumno);
+		inscriptos.add(alumno);
 
 	}
 	
@@ -39,7 +40,7 @@ public class Curso {
 	 */
 	public boolean estaInscripto(Persona alumno) {
 		
-		Iterator<Persona> itera = incriptos.iterator();
+		Iterator<Persona> itera = inscriptos.iterator();
 		while(itera.hasNext()){
 			Persona e = itera.next();
 			System.out.print(e + " / ");
@@ -74,7 +75,7 @@ public class Curso {
 	public String toString() {
 		return "Curso [nombre=" + getNombre() + 
 				      ", code=" + getCode() + 
-				 ", incriptos=" + incriptos.size() + "]";
+				 ", incriptos=" + inscriptos.size() + "]";
 	}
 
 }

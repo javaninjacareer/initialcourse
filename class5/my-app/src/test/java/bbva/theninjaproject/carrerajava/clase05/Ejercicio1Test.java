@@ -1,5 +1,6 @@
 package bbva.theninjaproject.carrerajava.clase05;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -15,7 +16,26 @@ public class Ejercicio1Test {
 		Curso javaNinja = new Curso("Java Inicial");
 		Persona javacha = new Persona("Javier", "Da Silva");
 		javaNinja.inscribirAlumno(javacha);
+		
+		javaNinja.inscribirAlumno(javacha);
+		
+		javaNinja.inscribirAlumno(javacha);
+		
+		javaNinja.inscribirAlumno(javacha);
+		
+		javaNinja.inscribirAlumno(javacha);
+		
+		
 		assertTrue(javaNinja.estaInscripto(javacha));
+		
+		int contadorDeJavachas = 0;
+		for (Persona alumno : javaNinja.inscriptos) {
+			if (alumno.getApellido().equals(javacha.getApellido())) {
+				contadorDeJavachas++;
+			}
+		}
+		
+		assertEquals(1, contadorDeJavachas);
 	}
 
 //	@Test
