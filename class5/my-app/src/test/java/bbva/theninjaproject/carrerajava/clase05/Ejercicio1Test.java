@@ -1,35 +1,30 @@
 package bbva.theninjaproject.carrerajava.clase05;
 
-import bbva.theninjaproject.carrerajava.clase05.Ejercicio1;
-import junit.framework.TestCase;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
-public class Ejercicio1Test extends TestCase
-{
+public class Ejercicio1Test {
 
-	
-    
-    public void testEjercicio2AlRevesadorDeFrasesInvierteBienUnaFrase()
-    {
-    	String frase = "Hola que tal!";
-        //assertEquals("!lat euq aloH", Ejercicio2.alRevesadorDeFrases(frase) );
-    }    
-    
+	@Test
+	public void testAgregarPersonaACurso() {
+		Curso javaNinja = new Curso("Java Inicial");
+		Persona javacha = new Persona("Javier", "Da Silva");
+		javaNinja.inscribirAlumno(javacha);
+		assertTrue(javaNinja.estaInscripto(javacha));
+	}
 
-    
-    
-    /**
-     * Probando Ejercicio2 SolucionUno
-     */
-    public void testEjercicio2SolucionUnoInvierteBienUnaFrase()
-    {
-    	String frase = "Hola que tal!";
-        //assertEquals("!lat euq aloH", Ejercicio2.solucionUno(frase) );
-    }
-    
+//	@Test
+//	public void testAgregarOtraPersonaACurso() {
+//		Curso javaNinja = new Curso("Java Inicial");
+//		Persona javacha = new Persona("Javier", "Da Silva");
+//		javaNinja.inscribirAlumno(javacha);
+//		Persona javachaDeNuevo = new Persona("Javier", "Da Silva");
+//		assertTrue(javaNinja.estaInscripto(javachaDeNuevo));
+//	}
 
-    
-    
 }
