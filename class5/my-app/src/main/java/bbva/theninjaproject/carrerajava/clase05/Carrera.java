@@ -38,9 +38,6 @@ public class Carrera {
 	 */
 	public boolean contiene(String codeCurso) {
 		
-		// return this.cursos.get(codeCurso) != null;
-		
-		return this.cursos.containsKey(codeCurso);
 	}
 	
 	
@@ -51,7 +48,7 @@ public class Carrera {
 	 * @return elimina un curso de la carrera
 	 */
 	public void eliminar(String codeCurso) {
-		this.cursos.remove(codeCurso);
+		
 	}
 	
 	
