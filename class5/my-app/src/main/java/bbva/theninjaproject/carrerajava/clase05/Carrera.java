@@ -55,4 +55,12 @@ public class Carrera {
 	}
 	
 	
+	/**
+	 * 
+	 * @return la cantidad de la colección
+	 */
+	public int cantidad() {
+		return this.cursos.size();
+	}
+	
 }

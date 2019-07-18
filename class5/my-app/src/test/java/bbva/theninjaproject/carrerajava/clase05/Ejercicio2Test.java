@@ -72,6 +72,8 @@ public class Ejercicio2Test {
 	@Test
 	public void testAgregarCurso() {
 	
+		int CARRERA_FRONT_SIZE = carrera_frontend.cantidad();
+		
 		String CODE_CURSO = "FRONT_PL01";
 		
 		assertTrue(!carrera_frontend.contiene(CODE_CURSO));
@@ -82,6 +84,8 @@ public class Ejercicio2Test {
 		carrera_frontend.addCurso(polymer);
 		
 		assertTrue(carrera_frontend.contiene(CODE_CURSO));
+
+		assertTrue(carrera_frontend.cantidad() ==  CARRERA_FRONT_SIZE + 1);
 		
 		// Lo reemplazamos por una version mas nueva del curso
 		polymer = new Curso(CODE_CURSO,  "Polymer v3");
@@ -89,6 +93,8 @@ public class Ejercicio2Test {
 		carrera_frontend.addCurso(polymer);
 		
 		assertTrue(carrera_frontend.contiene(CODE_CURSO));
+		
+		assertTrue(carrera_frontend.cantidad() ==  CARRERA_FRONT_SIZE + 1);
 
 		// Vemos la lista
 		System.out.println("Carrera Frontend Actualizada: " + carrera_frontend);
