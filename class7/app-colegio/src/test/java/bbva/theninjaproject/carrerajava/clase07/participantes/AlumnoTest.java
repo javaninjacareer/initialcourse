@@ -5,6 +5,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import bbva.theninjaproject.carrerajava.clase07.curricula.Aprobable;
+import bbva.theninjaproject.carrerajava.clase07.curricula.Materia;
+
 public class AlumnoTest {
 
 	Alumno jonathan;
@@ -30,9 +33,12 @@ public class AlumnoTest {
 	
 	@Test
 	public void testPromedioCursada() {
-		juanPablo.agregarNota(8);
-		juanPablo.agregarNota(6);
-		juanPablo.agregarNota(10);
+		
+		Materia matematica = new Materia("Matemática", Aprobable.EXAMEN_FINAL, 7);
+		
+		juanPablo.agregarNota(matematica, 8);
+		juanPablo.agregarNota(matematica, 6);
+		juanPablo.agregarNota(matematica, 10);
 		assertEquals(8, juanPablo.getPromedio(), 0.5);
 	}
 	

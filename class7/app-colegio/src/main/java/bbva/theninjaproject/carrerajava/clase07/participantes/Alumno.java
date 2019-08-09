@@ -3,6 +3,8 @@ package bbva.theninjaproject.carrerajava.clase07.participantes;
 import java.util.ArrayList;
 import java.util.List;
 
+import bbva.theninjaproject.carrerajava.clase07.curricula.Materia;
+
 public class Alumno extends Persona {
 	private List<Integer> notasDeCursada;
 
@@ -20,7 +22,11 @@ public class Alumno extends Persona {
 		return acumulador / notasDeCursada.size();
 	}
 
-	public void agregarNota(int nota) {
+	public int getPromedioInt() {
+		return (int) Math.floor(this.getPromedio());
+	}
+	
+	public void agregarNota(Materia materia, int nota) {
 		notasDeCursada.add(nota);
 	}
 
