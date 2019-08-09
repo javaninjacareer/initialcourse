@@ -33,4 +33,9 @@ public class Profesor extends Persona {
 		// return this.edad < 58 ? "Joven" : "Jovato";
 		return getEdad() < 58 ? "Joven" : "Jovato";
 	}
+
+	@Override
+	public Object getFirma() {
+		return "Prof. " + super.getFirma();
+	}
 }

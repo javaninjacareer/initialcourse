@@ -10,6 +10,10 @@ public class Persona {
 		this.apellido = apellido;
 		this.edad = edad;
 	}
+	
+	public Object getFirma() {
+		return this.nombre + " " + this.apellido;
+	}
 
 	public String getNombre() {
 		return nombre;
