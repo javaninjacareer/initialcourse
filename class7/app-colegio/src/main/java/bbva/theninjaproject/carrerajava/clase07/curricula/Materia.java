@@ -4,7 +4,7 @@ public class Materia implements Aprobable {
 	
 	private String nombre;
 	private int tipoExamen;
-	private double nota;
+	private int nota;
 	private boolean entrego_tf = false;
 	private int[] parciales = { 0, 0, 0 };
 	
@@ -53,11 +53,11 @@ public class Materia implements Aprobable {
 		this.nombre = nombre;
 	}
 	
-	public double getNota() {
+	public int getNota() {
 		return nota;
 	}
 	
-	public void setNota(double nota) {
+	public void setNota(int nota) {
 		this.nota = nota;
 	}
 
