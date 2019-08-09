@@ -1,4 +1,4 @@
-package bbva.theninjaproject.carrerajava.clase06;
+package bbva.theninjaproject.carrerajava.clase07;
 
 /**
  * Hello world!

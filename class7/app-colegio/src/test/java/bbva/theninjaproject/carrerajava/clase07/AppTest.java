@@ -1,4 +1,4 @@
-package bbva.theninjaproject.carrerajava.clase06;
+package bbva.theninjaproject.carrerajava.clase07;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
