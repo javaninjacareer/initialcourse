@@ -1,9 +1,9 @@
-package bbva.theninjaproject.carrerajava.clase07;
+package bbva.theninjaproject.carrerajava.clase07.personal;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-import bbva.theninjaproject.carrerajava.clase07.Alumno;
+import bbva.theninjaproject.carrerajava.clase07.personal.Alumno;
 
 public class AlumnoTest {
 

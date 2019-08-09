@@ -1,4 +1,4 @@
-package bbva.theninjaproject.carrerajava.clase07;
+package bbva.theninjaproject.carrerajava.clase07.personal;
 
 import java.util.ArrayList;
 import java.util.List;
