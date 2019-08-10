@@ -5,7 +5,7 @@ public class Materia implements Aprobable {
 	private String nombre;
 	private int tipoExamen;
 	private int nota;
-	private int[] parciales = { 0, 0, 0 };
+
 	
 	public Materia(String nombre) {
 		this.nombre     = nombre;
@@ -29,13 +29,6 @@ public class Materia implements Aprobable {
 		
 		if (this.tipoExamen == Aprobable.EXAMEN_FINAL) {
 			return notaAlumno >= this.nota;
-		}
-
-
-		if (this.tipoExamen == Aprobable.PROMOCIONA) {
-			return parciales[0] >= Aprobable.NOTA_MINIMA_APRUEBA 
-			    && parciales[1] >= Aprobable.NOTA_MINIMA_APRUEBA
-			    && parciales[2] >= Aprobable.NOTA_MINIMA_APRUEBA;
 		}
 		
 		return false;
