@@ -5,7 +5,6 @@ public class Materia implements Aprobable {
 	private String nombre;
 	private int tipoExamen;
 	private int nota;
-	private boolean entrego_tf = false;
 	private int[] parciales = { 0, 0, 0 };
 	
 	public Materia(String nombre) {
@@ -32,9 +31,27 @@ public class Materia implements Aprobable {
 			return notaAlumno >= this.nota;
 		}
 
-		if (this.tipoExamen == Aprobable.ENTREGA_TF) {
-			return this.entrego_tf;
+
+		if (this.tipoExamen == Aprobable.PROMOCIONA) {
+			return parciales[0] >= Aprobable.NOTA_MINIMA_APRUEBA 
+			    && parciales[1] >= Aprobable.NOTA_MINIMA_APRUEBA
+			    && parciales[2] >= Aprobable.NOTA_MINIMA_APRUEBA;
 		}
+		
+		return false;
+	}
+	
+	public boolean aprovado(boolean entrego_tf, int cantidad_paginas) {
+	
+		if (this.tipoExamen == Aprobable.ENTREGA_TF) {
+			return entrego_tf  && cantidad_paginas >= CANT_MINIMA_HOJAS_TF;
+		}
+		
+		return false;
+	}
+	
+
+	public boolean aprovado(int[] parciales) {
 		
 		if (this.tipoExamen == Aprobable.PROMOCIONA) {
 			return parciales[0] >= Aprobable.NOTA_MINIMA_APRUEBA 
@@ -42,7 +59,7 @@ public class Materia implements Aprobable {
 			    && parciales[2] >= Aprobable.NOTA_MINIMA_APRUEBA;
 		}
 		
-		return notaAlumno >= this.nota;
+		return false;
 	}
 	
 	public String getNombre() {

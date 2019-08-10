@@ -63,6 +63,13 @@ public class MateriaTest {
 		
 		assertFalse(matematica.aprovado(jonathan.getPromedioInt()));
 		
+		
+		// Fabian: Literatura -> Entrego el TF mayor a 20 hojas
+		
+		Alumno fabian = new Alumno("Fabián", "F.", 58);
+		
+		fabian.entregarTrabajo(64);
+		assertTrue(literatura.aprovado(fabian.isTf_entregado(), fabian.getTf_cant_hojas()));
 
 	}
 
