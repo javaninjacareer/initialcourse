@@ -29,9 +29,9 @@ public class MateriaTest {
 	@Test
 	public void testMaterias() {
 
-		assertFalse(quimica.aprovado(2));
-		assertTrue(quimica.aprovado(4));
-		assertTrue(quimica.aprovado(6));
+		assertFalse(quimica.aprobado(2));
+		assertTrue(quimica.aprobado(4));
+		assertTrue(quimica.aprobado(6));
 		
 	}
 
@@ -49,7 +49,7 @@ public class MateriaTest {
 		
 		assertEquals(8, juanPablo.getPromedio(), 0.5);
 		
-		assertTrue(quimica.aprovado(juanPablo.getPromedioInt()));
+		assertTrue(quimica.aprobado(juanPablo.getPromedioInt()));
 		
 		// JONATAN: Matematica >= 7
 		
@@ -61,7 +61,7 @@ public class MateriaTest {
 		
 		assertEquals(6, jonathan.getPromedio(), 0.5);
 		
-		assertFalse(matematica.aprovado(jonathan.getPromedioInt()));
+		assertFalse(matematica.aprobado(jonathan.getPromedioInt()));
 		
 		
 		// Fabian: Literatura -> Entrego el TF mayor a 20 hojas
@@ -69,7 +69,7 @@ public class MateriaTest {
 		Alumno fabian = new Alumno("Fabián", "F.", 58);
 		
 		fabian.entregarTrabajo(64);
-		assertTrue(literatura.aprovado(fabian.isTf_entregado(), fabian.getTf_cant_hojas()));
+		assertTrue(literatura.aprobado(fabian.isTf_entregado(), fabian.getTf_cant_hojas()));
 
 	}
 

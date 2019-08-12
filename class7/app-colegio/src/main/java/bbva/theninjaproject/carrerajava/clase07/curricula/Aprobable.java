@@ -9,12 +9,12 @@ public interface Aprobable {
 	public static final int ENTREGA_TF   = 1;
 	public static final int PROMOCIONA   = 2;
 	
-	public boolean aprovado(int notaAlumno);
+	public boolean aprobado(int notaAlumno);
 	
 	
-	public boolean aprovado(boolean entrego_tf, int cantidad_paginas);
+	public boolean aprobado(boolean entrego_tf, int cantidad_paginas);
 	
 	
-	public boolean aprovado(int[] parciales);
+	public boolean aprobado(int[] parciales);
 
 }
