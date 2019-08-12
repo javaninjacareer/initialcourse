@@ -1,5 +1,6 @@
 package bbva.theninjaproject.carrerajava.clase07.institucion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import bbva.theninjaproject.carrerajava.clase07.participantes.Alumno;
@@ -7,8 +8,8 @@ import bbva.theninjaproject.carrerajava.clase07.participantes.Profesor;
 
 public class InstitucionEducativa {
 
-	private List<Alumno> alumnos;
-	private List<Profesor> docentes;
+	private List<Alumno> alumnos = new ArrayList<Alumno>();
+	private List<Profesor> docentes = new ArrayList<Profesor>();
 	
 	public void contratarProfesor(Profesor profesor) {
 		docentes.add(profesor);
