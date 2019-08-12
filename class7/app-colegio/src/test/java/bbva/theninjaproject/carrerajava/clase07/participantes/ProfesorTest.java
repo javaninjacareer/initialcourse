@@ -10,22 +10,22 @@ import org.junit.Before;
 
 public class ProfesorTest {
 
-	Profesor chechoJovenYVigoroso;
+	Profesor checho;
 	Profesor javachaConCanas;
 	Profesor martin;
 	Profesor pablo;
 	
 	@Before
 	public void init() {
-		chechoJovenYVigoroso = new Profesor("Diego",  "Alfonso Oderigo", 36);
-		javachaConCanas      = new Profesor("Javier", "Da Silva", 60);
-		martin               = new Profesor("Martin", "Banfi", 27);
-		pablo                = new Profesor("Pabo",   "Inchausti", 44);
+		checho           = new Profesor("Diego",  "Alfonso Oderigo", 36);
+		javachaConCanas  = new Profesor("Javier", "Da Silva", 60);
+		martin           = new Profesor("Martin", "Banfi", 27);
+		pablo            = new Profesor("Pabo",   "Inchausti", 44);
 	}
 	
 	@Test
 	public void testProfeJoven() {
-		assertEquals("Joven", chechoJovenYVigoroso.getSeniority());
+		assertEquals("Joven", checho.getSeniority());
 	}
 	
 	@Test

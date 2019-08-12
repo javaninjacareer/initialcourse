@@ -25,7 +25,7 @@ public class Materia implements Aprobable {
 		this.nota       = nota;
 	}
 
-	public boolean aprovado(int notaAlumno) {
+	public boolean aprobado(int notaAlumno) {
 		
 		if (this.tipoExamen == Aprobable.EXAMEN_FINAL) {
 			return notaAlumno >= this.nota;
@@ -34,7 +34,7 @@ public class Materia implements Aprobable {
 		return false;
 	}
 	
-	public boolean aprovado(boolean entrego_tf, int cantidad_paginas) {
+	public boolean aprobado(boolean entrego_tf, int cantidad_paginas) {
 	
 		if (this.tipoExamen == Aprobable.ENTREGA_TF) {
 			return entrego_tf  && cantidad_paginas >= CANT_MINIMA_HOJAS_TF;
@@ -44,7 +44,7 @@ public class Materia implements Aprobable {
 	}
 	
 
-	public boolean aprovado(int[] parciales) {
+	public boolean aprobado(int[] parciales) {
 		
 		if (this.tipoExamen == Aprobable.PROMOCIONA) {
 			return parciales[0] >= Aprobable.NOTA_MINIMA_APRUEBA 
